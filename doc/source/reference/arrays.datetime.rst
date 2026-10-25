@@ -96,7 +96,7 @@ as ``now``.
     NAT (not a time):
 
     >>> np.datetime64('nat', 'D')
-    np.datetime64('NaT', 'D')
+    np.datetime64('NaT','D')
 
     The current time (UTC, default second precision):
 
@@ -225,7 +225,7 @@ data type also accepts the string "NAT" in place of the number for a "Not A Time
     np.timedelta64(4,'h')
 
     >>> np.timedelta64('nAt', 'D')
-    np.timedelta64('NaT', 'D')
+    np.timedelta64('NaT','D')
 
 Datetimes and Timedeltas work together to provide ways for
 simple datetime calculations.
@@ -255,7 +255,7 @@ simple datetime calculations.
     np.timedelta64('NaT','D')
 
     >>> np.datetime64('2009-01-01') + np.timedelta64('nat', 'D')
-    np.datetime64('NaT', 'D')
+    np.datetime64('NaT','D')
 
 There are two Timedelta units ('Y', years and 'M', months) which are treated
 specially, because how much time they represent changes depending
@@ -276,7 +276,7 @@ calculating the averaged values from the 400 year leap-year cycle.
     >>> a = np.timedelta64(1, 'Y')
 
     >>> np.timedelta64(a, 'M')
-    numpy.timedelta64(12,'M')
+    np.timedelta64(12,'M')
 
     >>> np.timedelta64(a, 'D')
     Traceback (most recent call last):
@@ -642,7 +642,7 @@ given below.
       >>> a = np.datetime64("0000-01-01", "us")
       >>> b = np.datetime64("1600-01-01", "us")
       >>> b - a
-      numpy.timedelta64(50491123200000000,'us')
+      np.timedelta64(50491123200000000,'us')
 
       The computed results, `50491123200` seconds, are obtained as the elapsed
       number of days (`584388`) times `86400` seconds; this is the number of
@@ -707,4 +707,4 @@ the level of precision you require.
     DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`).Please use a specific unit instead.
 
     >>> np.datetime64("NAT", "D")
-    np.datetime64('NaT', 'D')
+    np.datetime64('NaT','D')

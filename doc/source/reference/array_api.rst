@@ -46,7 +46,7 @@ that can be used for discovery purposes::
 
     >>> from importlib.metadata import entry_points
     >>> entry_points(group='array_api', name='numpy')
-    [EntryPoint(name='numpy', value='numpy', group='array_api')]
+    EntryPoints((EntryPoint(name='numpy', value='numpy', group='array_api'),))
 
 Note that leaving out ``name='numpy'`` will cause a list of entry points to be
 returned for all array API standard compatible implementations that installed
